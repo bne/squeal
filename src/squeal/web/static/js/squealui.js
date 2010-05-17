@@ -16,14 +16,14 @@ $(function() {
 
     $('#sources').accordion({
         icons: false,
-        autoHeight: false,
+        fillSpace: true,
         active: 1,
         header: 'h3'
     });
 
     $('#playlist').accordion({
         icons: false,
-        autoHeight: false
+        fillSpace: true
     });
 
     $(".progress").progressbar({
