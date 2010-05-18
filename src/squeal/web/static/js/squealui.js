@@ -50,5 +50,20 @@ $(function() {
         $(this).next().toggle();
         $(this).prepend('<span class="toggle">[+]</span>');
     });
+    
+    function _resize_main() {
+        $('#main').css("height", "auto");
+        var w = $(window).height();
+        var h = $('#header').height();
+        $('#main').height(w - h);
+    }
+    
+    $(window).resize(_resize_main);
+
+    _resize_main();
 
 });
+
+
+
+
