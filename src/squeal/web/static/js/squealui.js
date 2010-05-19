@@ -33,7 +33,8 @@ $(function() {
     $('.volume').slider({
         value: 75,
         min: 0,
-        max: 100});
+        max: 100
+    });
 
     $('#main div.panel dl dt').click(function(){
         if($(this).next().is(':visible')) {
@@ -52,10 +53,11 @@ $(function() {
     });
     
     function _resize_main() {
-        $('#main').css("height", "auto");
-        var w = $(window).height();
-        var h = $('#header').height();
-        $('#main').height(w - h);
+        var h = (
+            $(window).height() - 
+            $('#header').outerHeight() - $('#header').height()
+        );
+        $('#sources, #playlist').height(h);
     }
     
     $(window).resize(_resize_main);
